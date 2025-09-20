@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Album Promo – 4 Tracks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --glass: rgba(255,255,255,.06);
+      --txt:#e9e9ee; --muted:#b7b7c7;
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--txt);
+      background:#000;
+    }
+    .container{max-width:1100px; margin:0 auto; padding:28px}
+    header{display:grid; grid-template-columns: 140px 1fr; gap:20px; align-items:center; margin:16px 0 28px}
+    .cover{width:140px; height:140px; border-radius:18px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .cover img{width:100%; height:100%; object-fit:cover}
+    .title h1{margin:0; font-size: clamp(28px, 4vw, 40px)}
+    .title p{margin:0; color:var(--muted)}
+    .chip{display:inline-flex; align-items:center; gap:8px; padding:6px 12px; border-radius:99px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.1); backdrop-filter: blur(6px)}
+    .chip .dot{width:8px; height:8px; border-radius:50%; background:#ff5fa2; box-shadow:0 0 20px #ff5fa2}
+
+    .grid{display:grid; grid-template-columns: repeat(2,1fr); gap:18px}
+    @media (max-width:820px){.grid{grid-template-columns:1fr}}
+
+    .card{padding:16px; border-radius:var(--radius); background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); backdrop-filter: blur(8px); box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .meta h3{margin:0; font-size:18px}
+
+    .controls{display:flex; align-items:center; gap:12px; margin-top:12px}
+    .btn{width:40px; height:40px; display:grid; place-items:center; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:var(--glass); cursor:pointer}
+    .btn svg{width:18px; height:18px; fill:currentColor; color:var(--txt)}
+
+    .progress{position:relative; flex:1; height:8px; background:rgba(255,255,255,.12); border-radius:99px; overflow:hidden; cursor:pointer}
+    .bar{position:absolute; inset:0; width:0%; background:#ff5fa2; box-shadow:0 0 24px rgba(255,95,162,.35)}
+
+    .time{font-variant-numeric: tabular-nums; font-size:12px; color:var(--muted); width:88px; text-align:right}
+
+    .about{margin-top:28px}
+    .about .card{padding:22px}
+    .about h2{margin:0 0 8px; font-size:22px}
+    .about p{margin:0; color:var(--muted); line-height:1.6}
+
+    footer{display:flex; justify-content:space-between; align-items:center; margin:28px 0 10px; color:var(--muted); font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="cover"><img src="album-cover.png" alt="Album Cover" /></div>
+      <div class="title">
+        <div class="chip"><span class="dot"></span><span>New EP</span></div>
+        <h1>VIRTUAL ANGEL — EP</h1>
+        <p>4-track concept EP • Future-pop, ethereal, glitch</p>
+      </div>
+    </header>
+
+    <section class="grid" id="trackGrid">
+      <article class="card" data-src="songs/virtual-angel.mp3" data-title="VIRTUAL ANGEL">
+        <div class="meta">
+          <h3>VIRTUAL ANGEL</h3>
+          <div class="controls">
+            <button class="btn play" aria-label="Play/Pause">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="progress"><div class="bar"></div></div>
+            <div class="time">0:00 / 0:00</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-src="songs/neon-prophecy.mp3" data-title="NEON PROPHECY">
+        <div class="meta">
+          <h3>NEON PROPHECY</h3>
+          <div class="controls">
+            <button class="btn play" aria-label="Play/Pause">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="progress"><div class="bar"></div></div>
+            <div class="time">0:00 / 0:00</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-src="songs/crystal-eyes.mp3" data-title="CRYSTAL EYES">
+        <div class="meta">
+          <h3>CRYSTAL EYES</h3>
+          <div class="controls">
+            <button class="btn play" aria-label="Play/Pause">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="progress"><div class="bar"></div></div>
+            <div class="time">0:00 / 0:00</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-src="songs/falling-through-signals.mp3" data-title="FALLING THROUGH SIGNALS">
+        <div class="meta">
+          <h3>FALLING THROUGH SIGNALS</h3>
+          <div class="controls">
+            <button class="btn play" aria-label="Play/Pause">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="progress"><div class="bar"></div></div>
+            <div class="time">0:00 / 0:00</div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="about">
+      <div class="card">
+        <h2>About the EP</h2>
+        <p>Virtual Angel is an experimental album built around the imaginary angels and virtual prophets of the digital age. It reimagines human existence in a digitized world, where “angelic” signals arrive not from the sky but from flows of data. Sounds are broken apart, echoed, and rebuilt like fragments of code.<br><br>
+        Tracks:<br>
+        1. Virtual Angel<br>
+        2. Neon Prophecy<br>
+        3. Crystal Eyes<br>
+        4. Falling Through Signals</p>
+      </div>
+    </section>
+
+    <footer><span>© 2025 SOFTWIRED MAG — All rights reserved.</span></footer>
+  </div>
+
+  <!-- DÜZELTİLMİŞ: sadece tek kapanış etiketi -->
+  <audio id="player" preload="metadata"></audio>
+
+  <script>
+    const player = document.getElementById('player');
+    const cards = [...document.querySelectorAll('#trackGrid .card')];
+    let currentCard = null;
+
+    function formatTime(sec){
+      if(!isFinite(sec)) return '0:00';
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60).toString().padStart(2,'0');
+      return `${m}:${s}`;
+    }
+
+    function setPlayIcon(btn, playing){
+      btn.innerHTML = playing
+        ? '<svg viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>'
+        : '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+    }
+
+    // DÜZELTİLMİŞ loadCard
+    function loadCard(card){
+      const src = card.dataset.src;
+      if(!src) return;
+
+      player.src = src;
+      player.load();
+
+      currentCard = card;
+
+      player.play()
+        .catch((e)=>{ console.error('play error', e); })
+        .finally(()=>{ updateUI(); });
+    }
+
+    function updateUI(){
+      cards.forEach(c=>{
+        const isActive = c === currentCard;
+        const btn = c.querySelector('.btn');
+        const bar = c.querySelector('.bar');
+        const time = c.querySelector('.time');
+        if(!btn || !bar || !time) return;
+
+        if(isActive){
+          setPlayIcon(btn, !player.paused);
+          const progress = (player.currentTime / (player.duration || 1)) * 100;
+          bar.style.width = progress + '%';
+          const dur = isFinite(player.duration) ? player.duration : 0;
+          time.textContent = `${formatTime(player.currentTime)} / ${formatTime(dur)}`;
+          c.style.borderColor = 'rgba(255,255,255,.28)';
+        } else {
+          setPlayIcon(btn, false);
+          bar.style.width = '0%';
+          time.textContent = '0:00 / 0:00';
+          c.style.borderColor = 'rgba(255,255,255,.12)';
+        }
+      });
+    }
+
+    // Kart kontrolleri
+    cards.forEach(card=>{
+      const btn = card.querySelector('.btn');
+      const progress = card.querySelector('.progress');
+
+      if(btn){
+        btn.addEventListener('click', e=>{
+          e.stopPropagation();
+          if(currentCard !== card){
+            loadCard(card);
+          } else {
+            if(player.paused){ player.play(); } else { player.pause(); }
+            updateUI();
+          }
+        });
+      }
+
+      if(progress){
+        progress.addEventListener('click', e=>{
+          const rect = progress.getBoundingClientRect();
+          const ratio = (e.clientX - rect.left) / rect.width;
+          if(currentCard !== card){
+            // önce bu karta geç, metadata yüklenince atla
+            loadCard(card);
+            player.addEventListener('loadedmetadata', function jumpOnce(){
+              player.currentTime = ratio * (player.duration || 0);
+              player.removeEventListener('loadedmetadata', jumpOnce);
+            });
+          } else {
+            player.currentTime = ratio * (player.duration || 0);
+          }
+        });
+      }
+    });
+
+    // Olaylar
+    player.addEventListener('loadedmetadata', updateUI);
+    player.addEventListener('durationchange', updateUI);
+    player.addEventListener('timeupdate', updateUI);
+    player.addEventListener('play', updateUI);
+    player.addEventListener('pause', updateUI);
+
+    player.addEventListener('error', (e)=>{
+      console.error('audio error', e);
+      if(currentCard){
+        const t = currentCard.querySelector('.time');
+        if(t) t.textContent = 'file not found';
+      }
+    });
+
+    player.addEventListener('ended', ()=>{
+      if(!currentCard) return;
+      const i = cards.indexOf(currentCard);
+      const next = cards[i+1];
+      if(next){
+        loadCard(next);
+      } else {
+        player.currentTime = 0;
+        updateUI();
+      }
+    });
+  </script>
+</body>
+</html>
